@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: nowrap;
+    column-gap: 20px;
+}
+
+.logo {
+    height: 70px;
+}
+
+.icon {
+    color: black;
+}
+
+main {
+    background-color: #f5f5f7;
+}
