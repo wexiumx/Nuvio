@@ -11,6 +11,22 @@
   const qsa = (selector, root = document) => [...root.querySelectorAll(selector)];
   const normalizePath = (value) => String(value || '').replace(/\\/g, '/').toLowerCase();
 
+  // Local Python API endpoint. Keep in one place so it's easy to change later.
+  const API_BASE = 'http://127.0.0.1:5000';
+
+  const postJson = async (path, payload) => {
+    try {
+      await fetch(`${API_BASE}${path}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+        keepalive: true
+      });
+    } catch {
+      // Silent fail: website should still work even if backend is not running.
+    }
+  };
+
   // Global reading progress bar at the top of the page.
   const progress = document.createElement('div');
   progress.className = 'js-progress';
@@ -83,6 +99,11 @@
       if (!userText) return;
 
       addMessage(userText, 'user');
+      postJson('/api/feedback', {
+        message: userText,
+        page: window.location.pathname
+      });
+
       if (input) input.value = '';
 
       setTimeout(() => addMessage(getSupportReply(userText), 'agent'), 400);
@@ -356,6 +377,21 @@
     recalcTotals();
   }
 
+  function initBackendTracking() {
+    // Track one page view per page load with a tiny session id in sessionStorage.
+    let sessionId = sessionStorage.getItem('nuvio_session_id');
+    if (!sessionId) {
+      sessionId = `sess_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`;
+      sessionStorage.setItem('nuvio_session_id', sessionId);
+    }
+
+    postJson('/api/track', {
+      page: window.location.pathname,
+      session_id: sessionId
+    });
+  }
+
+  initBackendTracking();
   initSupportWidget();
   initActiveNav();
   initHeaderEffects();
