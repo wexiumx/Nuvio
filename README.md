@@ -8,6 +8,32 @@ This project was created as a **portfolio project** to demonstrate front-end dev
 
 ---
 
+---
+
+## 📸 Website Screenshots
+
+<details>
+<summary>Click to view screenshots</summary>
+
+<br>
+
+![Screenshot 1](nuvio/screenshot%20for%20github/screenshot1.png)
+
+![Screenshot 2](nuvio/screenshot%20for%20github/screenshot2.png)
+
+![Screenshot 3](nuvio/screenshot%20for%20github/screenshot3.png)
+
+![Screenshot 4](nuvio/screenshot%20for%20github/screenshot4.png)
+
+![Screenshot 5](nuvio/screenshot%20for%20github/screenshot5.png)
+
+![Screenshot 6](nuvio/screenshot%20for%20github/screenshot6.png)
+
+</details>
+
+---
+
+
 ## ⚠️ Disclaimer
 
 **Nuvio is a fictional company created only for this portfolio project.**
