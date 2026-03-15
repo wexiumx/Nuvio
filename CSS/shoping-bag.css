@@ -1,0 +1,261 @@
+/* ── Shopping Bag page ──────────────────────────────── */
+
+.bag-hero {
+    padding: 80px 24px 40px;
+    text-align: center;
+    background: linear-gradient(180deg, #ffffff 0%, #f7f7f9 100%);
+}
+
+.bag-hero h1 {
+    font-size: 72px;
+}
+
+
+/* Two-column layout: items + summary */
+.bag-content {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 32px;
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 60px 24px;
+    align-items: start;
+}
+
+
+/* Items column */
+.bag-items {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.bag-item {
+    display: grid;
+    grid-template-columns: 80px 1fr auto auto;
+    align-items: center;
+    gap: 20px;
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    padding: 20px 24px;
+    transition: box-shadow var(--transition);
+}
+
+.bag-item:hover {
+    box-shadow: var(--shadow-card);
+}
+
+.bag-item-img {
+    width: 72px;
+    height: 100px;
+    border-radius: 14px;
+    object-fit: cover;
+    flex-shrink: 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.bag-item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.bag-item-info h3 {
+    font-size: 17px;
+}
+
+.bag-item-info p {
+    font-size: 14px;
+    color: var(--color-text-muted);
+}
+
+.bag-remove {
+    font-size: 13px;
+    color: var(--color-text-dim);
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 4px;
+    transition: color var(--transition);
+}
+
+.bag-remove:hover {
+    color: #ff375f;
+}
+
+.bag-item-qty {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.bag-item-qty span {
+    font-size: 16px;
+    font-weight: 600;
+    min-width: 20px;
+    text-align: center;
+    color: var(--color-text);
+}
+
+.qty-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--color-surface-2);
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+    font-size: 18px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background var(--transition);
+}
+
+.qty-btn:hover {
+    background: var(--color-card-hover);
+    transform: none;
+    box-shadow: none;
+}
+
+.bag-item-price {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-text);
+    min-width: 64px;
+    text-align: right;
+}
+
+
+/* Summary card */
+.bag-summary {
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    padding: 32px 28px;
+    position: sticky;
+    top: 72px;
+}
+
+.bag-summary h2 {
+    font-size: 24px;
+    margin-bottom: 24px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    color: var(--color-text-muted);
+    padding: 10px 0;
+}
+
+.summary-row .free {
+    color: #30d158;
+    font-weight: 600;
+}
+
+.summary-divider {
+    border-bottom: 1px solid var(--color-border);
+    margin: 8px 0;
+}
+
+.summary-row.total {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-text);
+    padding-top: 16px;
+}
+
+.btn-checkout {
+    width: 100%;
+    padding: 14px 0;
+    margin-top: 24px;
+    font-size: 16px;
+}
+
+.bag-note {
+    font-size: 12px;
+    color: var(--color-text-dim);
+    text-align: center;
+    margin-top: 14px;
+}
+
+
+/* Suggestions */
+.bag-suggestions {
+    padding: 80px 40px 100px;
+    text-align: center;
+    background: var(--color-surface-2);
+}
+
+.bag-suggestions h2 {
+    margin-bottom: 48px;
+}
+
+.suggestions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+.suggestion-card {
+    background: var(--color-card);
+    border-radius: var(--radius-card);
+    border: 1px solid var(--color-border);
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.suggestion-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+.suggestion-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 16px;
+    object-fit: cover;
+    margin-bottom: 8px;
+}
+
+.suggestion-card h3 {
+    font-size: 16px;
+}
+
+.suggestion-card span {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.suggestion-card button {
+    padding: 9px 20px;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+
+@media (max-width: 900px) {
+    .bag-content { grid-template-columns: 1fr; }
+    .bag-summary  { position: static; }
+    .suggestions-grid { grid-template-columns: 1fr; }
+    .bag-hero h1 { font-size: 48px; }
+}
+
+@media (max-width: 600px) {
+    .bag-item {
+        grid-template-columns: 64px 1fr;
+        grid-template-rows: auto auto;
+    }
+    .bag-item-qty  { justify-self: start; }
+    .bag-item-price { justify-self: end; }
+}

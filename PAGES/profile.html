@@ -3,9 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nuvio — My Profile</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/profile.css">
 </head>
 <body>
-    
+    <header>
+        <ul>
+            <li><a href="store.html">Store</a></li>
+            <li><a href="accessories.html">Accessories</a></li>
+            <li class="nav-logo"><a href="../index.html"><img src="../IMG/logo.png" alt="logo" class="logo"></a></li>
+            <li><a href="nuvioOS.html">NuvioOS</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="#"><img src="../IMG/search_icon.svg" alt="search" class="icon"></a></li>
+            <li><a href="shoping-bag.html"><img src="../IMG/shop_icon.svg" alt="shopping bag" class="icon"></a></li>
+            <li><a href="profile.html"><img src="../IMG/profile_icon.svg" alt="profile" class="icon"></a></li>
+        </ul>
+    </header>
+
+    <main>
+        <section class="profile-hero">
+            <div class="profile-hero-card">
+                <img class="profile-avatar" src="https://randomuser.me/api/portraits/women/68.jpg" alt="Profile photo" />
+                <div class="profile-identity">
+                    <p class="profile-eyebrow">Nuvio ID</p>
+                    <h1>Astra Vale</h1>
+                    <p>Premium member since 2026 · astra.vale@nuvio.one</p>
+                    <div class="profile-meta">
+                        <span class="profile-status verified">Verified Account</span>
+                        <span class="profile-status">Last sign-in: Today, 09:14</span>
+                    </div>
+                    <div class="profile-hero-actions">
+                        <button>Manage Subscription</button>
+                        <button class="btn-ghost">View Invoices</button>
+                    </div>
+                </div>
+                <div class="profile-highlights">
+                    <div class="highlight-item">
+                        <span>Orders</span>
+                        <strong>12</strong>
+                    </div>
+                    <div class="highlight-item">
+                        <span>Devices</span>
+                        <strong>3</strong>
+                    </div>
+                    <div class="highlight-item">
+                        <span>Rewards</span>
+                        <strong>2,480 pts</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="profile-content">
+            <aside class="profile-sidebar">
+                <nav class="profile-nav">
+                    <a href="#overview" class="profile-nav-link active">Overview</a>
+                    <a href="#personal-info" class="profile-nav-link">Personal Info</a>
+                    <a href="#security-center" class="profile-nav-link">Security</a>
+                    <a href="#recent-orders" class="profile-nav-link">Orders</a>
+                    <a href="#registered-devices" class="profile-nav-link">Devices</a>
+                    <a href="support.html" class="profile-nav-link">Support</a>
+                    <a href="#" class="profile-nav-link profile-nav-action">Sign Out</a>
+                </nav>
+
+                <div class="support-card">
+                    <h3>Need help?</h3>
+                    <p>Our support team is available 24/7 for account and device assistance.</p>
+                    <a href="support.html">Contact Support</a>
+                </div>
+            </aside>
+
+            <div class="profile-main">
+                <article class="profile-card" id="overview">
+                    <h2>Account Overview</h2>
+                    <div class="overview-grid">
+                        <div class="mini-stat">
+                            <span>Account Health</span>
+                            <strong>96%</strong>
+                            <small>All critical protections enabled</small>
+                        </div>
+                        <div class="mini-stat">
+                            <span>Saved Payment</span>
+                            <strong>Visa •• 2048</strong>
+                            <small>Renews subscription on Apr 01</small>
+                        </div>
+                        <div class="mini-stat">
+                            <span>Shipping Address</span>
+                            <strong>Oslo, Norway</strong>
+                            <small>2 active delivery locations</small>
+                        </div>
+                    </div>
+                    <div class="account-checklist">
+                        <div class="check-item done">Email verified</div>
+                        <div class="check-item done">Phone verified</div>
+                        <div class="check-item done">Two-factor enabled</div>
+                        <div class="check-item">Add backup security key</div>
+                    </div>
+                </article>
+
+                <article class="profile-card" id="personal-info">
+                    <h2>Personal Information</h2>
+                    <div class="profile-form">
+                        <div class="form-row">
+                            <label>First Name</label>
+                            <input type="text" value="Astra" />
+                        </div>
+                        <div class="form-row">
+                            <label>Last Name</label>
+                            <input type="text" value="Vale" />
+                        </div>
+                        <div class="form-row full">
+                            <label>Email</label>
+                            <input type="email" value="astra.vale@nuvio.one" />
+                        </div>
+                        <div class="form-row">
+                            <label>Phone</label>
+                            <input type="tel" value="+46 70 321 9988" />
+                        </div>
+                        <div class="form-row">
+                            <label>Country</label>
+                            <input type="text" value="Norway" />
+                        </div>
+                        <div class="form-actions">
+                            <button>Save Changes</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="profile-card security-card" id="security-center">
+                    <h2>Security Center</h2>
+                    <div class="security-list">
+                        <div class="security-row">
+                            <div>
+                                <strong>Two-Factor Authentication</strong>
+                                <p>Extra layer of security on every sign-in.</p>
+                            </div>
+                            <span class="chip enabled">Enabled</span>
+                        </div>
+                        <div class="security-row">
+                            <div>
+                                <strong>Biometric Unlock</strong>
+                                <p>Use Face Unlock on supported Nuvio devices.</p>
+                            </div>
+                            <span class="chip enabled">Enabled</span>
+                        </div>
+                        <div class="security-row">
+                            <div>
+                                <strong>Recovery Key</strong>
+                                <p>Last generated: March 10, 2026.</p>
+                            </div>
+                            <span class="chip neutral">Regenerate</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="profile-card" id="recent-orders">
+                    <h2>Recent Orders</h2>
+                    <div class="orders-list">
+                        <div class="order-item">
+                            <div>
+                                <strong>Order #NV-39281 · Nuvio N1 Pro</strong>
+                                <span class="order-date">Delivered on Feb 12, 2026</span>
+                            </div>
+                            <span class="order-status delivered">Delivered</span>
+                        </div>
+                        <div class="order-item">
+                            <div>
+                                <strong>Order #NV-40107 · Nuvio Buds + Clear Case</strong>
+                                <span class="order-date">Shipped on Mar 1, 2026</span>
+                            </div>
+                            <span class="order-status transit">In Transit</span>
+                        </div>
+                    </div>
+                    <a href="shoping-bag.html"><button class="btn-outline">Continue Shopping</button></a>
+                </article>
+
+                <article class="profile-card" id="registered-devices">
+                    <h2>Registered Devices</h2>
+                    <div class="device-list">
+                        <div class="device-item">
+                            <img class="device-icon" src="../IMG/profile_icon.svg" alt="Device icon" />
+                            <div class="device-info">
+                                <strong>Nuvio N1 Pro · Midnight Blue</strong>
+                                <span>Last active: today · Oslo</span>
+                            </div>
+                            <span class="device-badge">Active</span>
+                        </div>
+                        <div class="device-item">
+                            <img class="device-icon" src="../IMG/profile_icon.svg" alt="Device icon" />
+                            <div class="device-info">
+                                <strong>Nuvio Tablet Air</strong>
+                                <span>Last active: yesterday · Bergen</span>
+                            </div>
+                            <span class="device-badge">Trusted</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Nuvio &copy; 2026 — Northshift · wexiumx</p>
+    </footer>
+    <script src="../JS/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,174 @@
+/* ── NuvioOS page ───────────────────────────────────── */
+
+/* Hero */
+.os-hero {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 24px 60px;
+    background: radial-gradient(ellipse at 50% -16%, rgba(0,102,204,0.16) 0%, #ffffff 62%, #f7f7f9 100%);
+}
+
+.os-eyebrow {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: 14px;
+}
+
+.os-hero h1 {
+    font-size: 90px;
+    background: linear-gradient(90deg, #1d1d1f 35%, #0066cc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 20px;
+}
+
+.os-sub {
+    font-size: 20px;
+    color: var(--color-text-muted);
+    max-width: 560px;
+}
+
+
+/* Features grid */
+.os-features {
+    padding: 80px 40px;
+    background: var(--color-bg);
+}
+
+.os-feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.os-feature-card {
+    background: var(--color-card);
+    border-radius: var(--radius-card);
+    border: 1px solid var(--color-border);
+    border-top-width: 2px;
+    padding: 36px 28px;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.os-feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.os-feature-image {
+    width: 100%;
+    height: 150px;
+    border-radius: 12px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 16px;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+}
+
+.os-feature-card h3 {
+    margin-bottom: 10px;
+}
+
+
+/* Callout */
+.os-callout {
+    padding: 100px 40px;
+    text-align: center;
+    background: linear-gradient(180deg, #fbfbfd 0%, #f2f2f6 100%);
+}
+
+.os-callout h2 {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.os-callout p {
+    font-size: 18px;
+    max-width: 640px;
+    margin: 0 auto 36px;
+}
+
+
+/* Specs */
+.os-specs {
+    padding: 80px 40px 100px;
+    text-align: left;
+    background: var(--color-bg);
+    display: block;
+    min-height: auto;
+}
+
+.os-specs-wrap {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.os-specs h2 {
+    margin-bottom: 34px;
+    text-align: left;
+}
+
+.os-spec-list {
+    max-width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    padding: 6px 22px;
+}
+
+.os-spec-row {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    column-gap: 26px;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 16px;
+}
+
+.os-spec-row:last-child {
+    border-bottom: none;
+}
+
+.os-spec-row span:first-child {
+    color: var(--color-text-muted);
+    font-weight: 500;
+}
+
+.os-spec-row span:last-child {
+    color: var(--color-text);
+    text-align: left;
+}
+
+
+@media (max-width: 900px) {
+    .os-feature-grid { grid-template-columns: repeat(2, 1fr); }
+    .os-hero h1 { font-size: 60px; }
+    .os-callout h2 { font-size: 44px; }
+    .os-spec-row { grid-template-columns: 170px 1fr; }
+}
+@media (max-width: 600px) {
+    .os-feature-grid { grid-template-columns: 1fr; }
+    .os-hero h1 { font-size: 48px; }
+    .os-specs { padding: 64px 20px 84px; }
+    .os-spec-list { padding: 4px 12px; }
+    .os-spec-row {
+        grid-template-columns: 1fr;
+        row-gap: 6px;
+        font-size: 14px;
+    }
+}

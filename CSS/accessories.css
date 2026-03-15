@@ -1,0 +1,116 @@
+/* ── Accessories page ────────────────────────────────── */
+
+.acc-hero {
+    min-height: 38vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 24px 40px;
+    background: linear-gradient(180deg, #ffffff 0%, #f7f7f9 100%);
+}
+
+.acc-hero h1 { font-size: 80px; margin-bottom: 12px; }
+.acc-hero p  { font-size: 20px; color: var(--color-text-muted); }
+
+
+.acc-section {
+    padding: 80px 40px;
+    text-align: right;
+    background: var(--color-bg);
+}
+
+.acc-section-alt {
+    background: var(--color-surface-2);
+}
+
+.acc-section h2 {
+    margin-bottom: 48px;
+}
+
+.acc-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 0 0 auto;
+    align-items: stretch;
+    grid-auto-rows: 1fr;
+}
+
+
+.acc-card {
+    background: var(--color-card);
+    border-radius: var(--radius-card);
+    border: 1px solid var(--color-border);
+    padding: 36px 28px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    text-align: right;
+    height: 100%;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.acc-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-hover);
+}
+
+.acc-image {
+    width: 100%;
+    height: 180px;
+    border-radius: 14px;
+    object-fit: cover;
+    margin-bottom: 8px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.acc-card h3 {
+    font-size: 20px;
+    min-height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.acc-card p  {
+    font-size: 14px;
+    color: var(--color-text-muted);
+    min-height: 72px;
+    width: 100%;
+}
+
+.acc-price {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-top: auto;
+    width: 100%;
+}
+
+.acc-card a {
+    width: 100%;
+    display: block;
+}
+
+.acc-card button {
+    margin-top: 14px;
+    width: 100%;
+    min-height: 50px;
+    padding: 14px 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+@media (max-width: 768px) {
+    .acc-section { text-align: center; }
+    .acc-grid  { grid-template-columns: 1fr; margin: 0 auto; }
+    .acc-card { align-items: center; text-align: center; }
+    .acc-card h3 { justify-content: center; }
+    .acc-hero h1 { font-size: 52px; }
+}

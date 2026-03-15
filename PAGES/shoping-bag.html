@@ -3,9 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nuvio — Shopping Bag</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/shoping-bag.css">
 </head>
 <body>
-    
+    <header>
+        <ul>
+            <li><a href="store.html">Store</a></li>
+            <li><a href="accessories.html">Accessories</a></li>
+            <li class="nav-logo"><a href="../index.html"><img src="../IMG/logo.png" alt="logo" class="logo"></a></li>
+            <li><a href="nuvioOS.html">NuvioOS</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="#"><img src="../IMG/search_icon.svg" alt="search" class="icon"></a></li>
+            <li><a href="shoping-bag.html"><img src="../IMG/shop_icon.svg" alt="shopping bag" class="icon"></a></li>
+            <li><a href="profile.html"><img src="../IMG/profile_icon.svg" alt="profile" class="icon"></a></li>
+        </ul>
+    </header>
+
+    <main>
+        <section class="bag-hero">
+            <h1>Shopping Bag</h1>
+        </section>
+
+        <section class="bag-content">
+
+            <div class="bag-items">
+
+                <div class="bag-item">
+                    <img class="bag-item-img" src="../IMG/store-n1-pro-bright.jpg" alt="Nuvio N1 Pro" />
+                    <div class="bag-item-info">
+                        <h3>Nuvio N1 Pro</h3>
+                        <p>Midnight Blue · 256 GB</p>
+                        <a href="#" class="bag-remove">Remove</a>
+                    </div>
+                    <div class="bag-item-qty">
+                        <button class="qty-btn">&#x2212;</button>
+                        <span>1</span>
+                        <button class="qty-btn">+</button>
+                    </div>
+                    <span class="bag-item-price">$599</span>
+                </div>
+
+                <div class="bag-item">
+                    <img class="bag-item-img" src="../IMG/acc-buds.jpg" alt="Nuvio Buds" />
+                    <div class="bag-item-info">
+                        <h3>Nuvio Buds</h3>
+                        <p>Midnight Black</p>
+                        <a href="#" class="bag-remove">Remove</a>
+                    </div>
+                    <div class="bag-item-qty">
+                        <button class="qty-btn">&#x2212;</button>
+                        <span>1</span>
+                        <button class="qty-btn">+</button>
+                    </div>
+                    <span class="bag-item-price">$129</span>
+                </div>
+
+                <div class="bag-item">
+                    <img class="bag-item-img" src="../IMG/acc-clear-case.jpg" alt="Clear Case" />
+                    <div class="bag-item-info">
+                        <h3>Clear Case</h3>
+                        <p>For Nuvio N1 Pro</p>
+                        <a href="#" class="bag-remove">Remove</a>
+                    </div>
+                    <div class="bag-item-qty">
+                        <button class="qty-btn">&#x2212;</button>
+                        <span>1</span>
+                        <button class="qty-btn">+</button>
+                    </div>
+                    <span class="bag-item-price">$29</span>
+                </div>
+
+            </div>
+
+            <div class="bag-summary">
+                <h2>Order Summary</h2>
+
+                <div class="summary-row">
+                    <span>Subtotal (3 items)</span>
+                    <span>$757</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span class="free">Free</span>
+                </div>
+                <div class="summary-row">
+                    <span>Tax (est.)</span>
+                    <span>$60.56</span>
+                </div>
+
+                <div class="summary-divider"></div>
+
+                <div class="summary-row total">
+                    <span>Total</span>
+                    <span>$817.56</span>
+                </div>
+
+                <button class="btn-checkout">Check Out</button>
+                <p class="bag-note">Free delivery on all orders. 30-day returns.</p>
+            </div>
+
+        </section>
+
+        <section class="bag-suggestions">
+            <h2>You Might Also Like</h2>
+            <div class="suggestions-grid">
+
+                <div class="suggestion-card">
+                    <img class="suggestion-img" src="../IMG/acc-rugged-case.jpg" alt="Rugged case" />
+                    <h3>Rugged Case</h3>
+                    <span>$49</span>
+                    <button>Add to Bag</button>
+                </div>
+
+                <div class="suggestion-card">
+                    <img class="suggestion-img" src="../IMG/acc-fast-charger.jpg" alt="65W fast charger" />
+                    <h3>65 W Fast Charger</h3>
+                    <span>$39</span>
+                    <button>Add to Bag</button>
+                </div>
+
+                <div class="suggestion-card">
+                    <img class="suggestion-img" src="../IMG/acc-headphones.jpg" alt="Nuvio headphones" />
+                    <h3>Nuvio Headphones</h3>
+                    <span>$199</span>
+                    <button>Add to Bag</button>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Nuvio &copy; 2026 — Northshift · wexiumx</p>
+    </footer>
+    <script src="../JS/main.js"></script>
 </body>
 </html>
